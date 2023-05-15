@@ -36,7 +36,9 @@
 				<div class="prawy">
 					<h3 class="titles">Zamówienia</h3>
 					<hr>
-					
+					<?php
+					echo $payments->getSqlComplited1($firstName, $lastName);
+					?>
 				</div>
 			</div>
 			<div class="payments">
