@@ -58,7 +58,7 @@
 			<div class="stopkal">
 				<p>Autorem aplikacji jest: 0000000000000000</p>
 				<ul>
-					<li>Skontaktuj się</li>
+					<li>Skontaktuj się ze mną</li>
 					<li>Poznaj naszą firmę</li>
 				</ul>
 			</div>
