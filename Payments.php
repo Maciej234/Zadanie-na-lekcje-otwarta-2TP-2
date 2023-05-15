@@ -66,9 +66,18 @@ class Payments {
 	}
 	
 	public function getSqlComplited2($name, $lastname) {
-		if (is_null($name) || is_null($lastname)) {return '';}
-		
-		/* zwrócenie zawartości zapytania $this->sqlComplited2 w postaci tabeli Html (zwróc uwagę, że zapytanie zwraca 4 kolumny) */
+        if (is_null($name) || is_null($lastname)) {return '';}
+
+        $conn = $this->getConnection();
+        $result = $conn->query($this->sqlComplited2($name, $lastname));
+        $conn->close();
+        $resultHtml = '';
+        $resultHtml = '<table border="1">';
+        while($row = $result->fetch_array()){
+            $resultHtml .= "<tr><td>".$row[0]." </td><td> ".$row[1]." </td><td> ".$row[2]." </td><td> ".$row[3]." </td></tr>";
+        }
+        $resultHtml .= "</table>";
+        return  $resultHtml;
 	}
 	
 	public function getSqlComplited3($name, $lastname) {
